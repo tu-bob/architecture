@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Models;
 
-class User
+class User extends Model
 {
     public function role()
     {

@@ -4,11 +4,14 @@ declare(strict_types=1);
 
 namespace Mappers;
 
+use Mappers\Traits\Timestamps;
 use Entities\User;
 use Models\User as UserModel;
 
 class UserMapper
 {
+    use Timestamps;
+
     public function toEntity(UserModel $model): User
     {
         $entity = new User(
@@ -16,6 +19,8 @@ class UserMapper
             name: $model->name,
             email: $model->email
         );
+
+        $this->setTimestampsOnEntity($model, $entity);
 
         return $entity;
     }
@@ -26,9 +31,10 @@ class UserMapper
         $model->id = $entity->getId();
         $model->name = $entity->getName();
         $model->email = $entity->getEmail();
+        $this->setTimestampsOnModel($entity, $model);
 
         //Laravel uses the following property to distinguish between
-        // insert and update operations
+        //insert and update operations
         $model->exists = $entity->getId() !== null;
 
         return $model;

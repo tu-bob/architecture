@@ -5,9 +5,13 @@ declare(strict_types=1);
 namespace Entities;
 
 use Collections\UserCollection;
+use Entities\Contracts\EntityWithTimestamps;
+use Entities\Traits\Timestamps;
 
-class Role
+class Role implements EntityWithTimestamps
 {
+    use Timestamps;
+
     public function __construct(
         private ?int $id = null,
         private string $name = '',

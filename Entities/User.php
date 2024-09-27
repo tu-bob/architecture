@@ -4,8 +4,13 @@ declare(strict_types=1);
 
 namespace Entities;
 
-class User
+use Entities\Contracts\EntityWithTimestamps;
+use Entities\Traits\Timestamps;
+
+class User implements EntityWithTimestamps
 {
+    use Timestamps;
+
     public function __construct(
         private ?int $id = null,
         private string $name = '',
