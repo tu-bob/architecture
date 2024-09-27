@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Entities;
+namespace Domain\Entities;
 
-use Collections\UserCollection;
-use Entities\Contracts\EntityWithTimestamps;
-use Entities\Traits\Timestamps;
+use Domain\Collections\UserCollection;
+use Domain\Entities\Contracts\EntityWithTimestamps;
+use Domain\Entities\Traits\Timestamps;
 
 class Role implements EntityWithTimestamps
 {

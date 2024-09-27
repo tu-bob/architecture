@@ -2,9 +2,9 @@
 
 namespace Mappers\Traits;
 
-use Entities\Contracts\EntityWithTimestamps;
-use Models\Model;
 use Carbon\Carbon;
+use Domain\Entities\Contracts\EntityWithTimestamps;
+use Models\Model;
 
 
 trait Timestamps

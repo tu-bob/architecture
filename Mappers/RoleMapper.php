@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Mappers;
 
-use Entities\Role;
+use Domain\Entities\Role;
 use Models\Role as RoleModel;
 
 class RoleMapper

@@ -4,11 +4,12 @@ declare(strict_types=1);
 
 namespace Repositories;
 
-use Collections\UserCollection;
-use Entities\User;
+use Domain\Collections\UserCollection;
+use Domain\Entities\Role;
+use Domain\Entities\User;
 use Mappers\RoleMapper;
-use Models\User as UserModel;
 use Mappers\UserMapper;
+use Models\User as UserModel;
 
 class UserRepository
 {
@@ -69,5 +70,12 @@ class UserRepository
             })->all();
 
         return new UserCollection($users);
+    }
+
+    public function attachRole(User $user, Role $role): void
+    {
+        $model = $this->userMapper->toModel($user);
+
+        $model->role()->associate($this->roleMapper->toModel($role));
     }
 }

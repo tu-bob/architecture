@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Entities;
+namespace Domain\Entities;
 
-use Entities\Contracts\EntityWithTimestamps;
-use Entities\Traits\Timestamps;
+use Domain\Entities\Contracts\EntityWithTimestamps;
+use Domain\Entities\Traits\Timestamps;
 
 class User implements EntityWithTimestamps
 {

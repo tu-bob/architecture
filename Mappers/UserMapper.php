@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Mappers;
 
+use Domain\Entities\User;
 use Mappers\Traits\Timestamps;
-use Entities\User;
 use Models\User as UserModel;
 
 class UserMapper

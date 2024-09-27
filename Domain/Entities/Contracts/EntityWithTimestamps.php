@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Entities\Contracts;
+namespace Domain\Entities\Contracts;
 
 use DateTimeImmutable;
 

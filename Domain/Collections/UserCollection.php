@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Collections;
+namespace Domain\Collections;
 
-use Entities\User;
+use Domain\Entities\User;
 
 class UserCollection implements \Iterator
 {

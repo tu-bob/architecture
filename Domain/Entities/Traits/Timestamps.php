@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Entities\Traits;
+namespace Domain\Entities\Traits;
 
 use DateTimeImmutable;
 
